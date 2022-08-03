@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Calculator</h1>
+    <div class="center">
+        <div class="row">
+       <input class="input" type="text" placeholder="">
+    </div>
+</div>
+    <div class="main">
+        <div class="row">
+        <button id="btn">7</button>
+        <button id="btn">8</button>
+        <button id="btn">9</button>
+        <button id="btn">*</button>
+    </div>
+    <div class="row">
+        <button id="btn">4</button>
+        <button id="btn">5</button>
+        <button id="btn">6</button>
+        <button id="btn">-</button>
+    </div>
+    <div class="row">
+        <button id="btn">1</button>
+        <button id="btn">2</button>
+        <button id="btn">3</button>
+        <button id="btn">+</button>
+    </div>
+    <div class="row">
+        <button id="btn">0</button>
+        <button id="btn">.</button>
+        <button id="btn">c</button>
+        <button id="btn">=</button>
+
+        
+       
+    </div>
+         </div>
+    </div>
+    <script>
+        let string = "";
+let btns = document.querySelectorAll('#btn');
+Array.from(btns).forEach(function f(btn){
+    btn.addEventListener('click', function run(e){
+        if(e.target.innerHTML == '='){
+            string = eval(string);
+            document.querySelector('.input').value = string;
+        } 
+        
+        else if(e.target.innerHTML == 'c'){
+            string = "";
+            document.querySelector('.input').value = string;
+        }
+           else{
+        console.log(e.target)
+        string = string + e.target.innerHTML;
+        document.querySelector('.input').value = string;
+           }
+    
+       
+    })
+})
+
+
+    </script>
+</body>
+</html>

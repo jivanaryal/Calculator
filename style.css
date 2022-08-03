@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+.main{
+    text-align: center;
+}.row{
+    padding: 7px 5px;
+    background-color: whitesmoke;
+    text-align: center;
+    
+}#btn{
+    background: black;
+    color: white;
+    padding: 12px 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}.center input{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: transparent;
+    opacity:calc(0,0,0,0.2);
+    
+}
+    
